@@ -24,6 +24,7 @@
   <div style="background-color: #242021; color: #ffffff; max-width: 722px; margin: 0 auto;"><img src="https://drive.google.com/uc?export=view&amp;id=1uQoryxJmIUY0dPapdvB-ZZhFhcaGcSy_" alt="Header Image" width="100%" height="35%" />
         <div>
             <h2 id="fullname" style="color: #e09d94; text-align: center;"></h2>
+            <h2 id="email" style="color: #e09d94; text-align: center;"></h2>
             <p>&nbsp;</p>
 
             <p>&nbsp;</p>
@@ -33,10 +34,12 @@
   <script>
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    
-    const fullname = urlParams.get('fullname');
 
-    document.getElementById('fullname').textContent = fullname;
+    const fullname = urlParams.get('fullname');
+    const email = urlParams.get('email');
+
+    document.getElementById('fullname').textContent = "Nombre: " + fullname;
+    document.getElementById('email').textContent = "Email: " + email;
   </script>
 </body>
 </html>
